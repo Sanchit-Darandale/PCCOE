@@ -258,7 +258,8 @@ async function sendMessage(message) {
 
     try {
         console.log('Sending request to API...');
-        const response = await fetch(`https://ds-chatbot-api-platform.onrender.com/ai?query=${encodeURIComponent(message)}&model=gemini&id=${encodeURIComponent(userPassword)}&system_prompt=${encodeURIComponent(systemPrompt)}`);
+        //const response = await fetch(`https://ds-chatbot-api-platform.onrender.com/ai?query=${encodeURIComponent(message)}&model=gemini&id=${encodeURIComponent(userPassword)}&system_prompt=${encodeURIComponent(systemPrompt)}`);
+        const response = await fetch(`https://ds-canopycare.vercel.app/ai?text=${encodeURIComponent(message)}&system_prompt=${encodeURIComponent(systemPrompt)}`);
         console.log('Response status:', response.status);
         if (!response.ok) {
             const errorText = await response.text();
