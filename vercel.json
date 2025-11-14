@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
-      "src": "/(.*)",
-      "dest": "/$1"
+      "src": "index.html",
+      "use": "@vercel/static"
     }
+  ],
+  "routes": [
+    { "src": "/chatbot", "dest": "/chatbot.html" },
+    { "src": "/signup", "dest": "/signup.html" }
   ]
 }
